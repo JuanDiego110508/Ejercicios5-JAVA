@@ -11,27 +11,27 @@ public class PromedioNotas5 {
         int suma = 0;
 
         // Inicializar con valores extremos
-        int notaMax = Integer.MIN_VALUE; 
-        int notaMin = Integer.MAX_VALUE;
+        int notaMayor = Integer.MIN_VALUE; 
+        int notaMenor = Integer.MAX_VALUE;
 
         for (int i = 0; i < cantidad; i++) {
             System.out.print("Ingresa la nota " + (i + 1) + ": ");
             notas[i] = scanner.nextInt();
             suma += notas[i];  
 
-            if (notas[i] > notaMax) {
-                notaMax = notas[i]; 
+            if (notas[i] > notaMayor) {
+                notaMayor = notas[i]; 
             }
 
-            if (notas[i] < notaMin) {
-                notaMin = notas[i];
+            if (notas[i] < notaMenor) {
+                notaMenor = notas[i];
             }
         }
-        double promedio = (double) suma / cantidad;
+        double promedio = (double)suma/cantidad;
 
         System.out.println("El promedio de las notas es: " + promedio);
-        System.out.println("La nota mas alta es: " + notaMax);
-        System.out.println("La nota mas baja es: " + notaMin);
+        System.out.println("La nota mas alta es: " + notaMayor);
+        System.out.println("La nota mas baja es: " + notaMenor);
         scanner.close();
     }
 }
